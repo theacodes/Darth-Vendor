@@ -5,8 +5,8 @@ VERSION = '0.0.1'
 setup(
     name="darth",
     version=VERSION,
-    author='Jon Wayne Parrott, [proppy], [webmaven]',
-    author_email='jon.wayne.parrott@gmail.com, [proppy], [webmaven]',
+    author='Jon Wayne Parrott, [proppy], Michael R. Bernstein',
+    author_email='jon.wayne.parrott@gmail.com, [proppy], michael@fandomhome.com',
     maintainer='Jon Wayne Parrott',
     maintainer_email='jon.wayne.parrott@gmail.com',
     description='Third-party vendoring helper for Google App Engine and other sandboxed python environments.',
