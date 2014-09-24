@@ -6,7 +6,7 @@ setup(
     name="darth",
     version=VERSION,
     author='Jon Wayne Parrott, [proppy], [webmaven]',
-    author_email='jjramone13@gmail.com, [proppy], [webmaven]',
+    author_email='jon.wayne.parrott@gmail.com, [proppy], [webmaven]',
     maintainer='Jon Wayne Parrott',
     maintainer_email='jon.wayne.parrott@gmail.com',
     description='Third-party vendoring helper for Google App Engine and other sandboxed python environments.',
