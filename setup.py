@@ -3,7 +3,7 @@ from setuptools import setup
 VERSION = '0.0.1'
 
 setup(
-    name="darth_vendor",
+    name="darth",
     version=VERSION,
     author='Jon Wayne Parrott, [proppy], [webmaven]',
     author_email='jjramone13@gmail.com, [proppy], [webmaven]',
@@ -17,7 +17,7 @@ setup(
         'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python',
     ],
-    packages=['darth_vendor'],
+    packages=['darth'],
     install_requires=[
     ],
 )
