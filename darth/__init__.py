@@ -25,14 +25,17 @@ import os.path
 import sys
  
 
-def vendor(folder):
+def vendor(folder, position=1):
   """
   Adds the given folder to the python path. Supports namespaced packages.
-  Packages in the given folder take precedence over site-packages and any
-  previous path manipulations.
+  By default, packages in the given folder take precedence over site-packages
+  and any previous path manipulations.
  
   Args:
-    folder: path to the folder containing packages, relative to os.getcwd()
+    folder: Path to the folder containing packages, relative to ``os.getcwd()``
+    position: Where in ``sys.path`` to insert the vendor packages. By default
+      this is set to 1. It is inadvisable to set it to 0 as it will override
+      any modules in the current working directory.
   """
   # Use site.addsitedir() because it appropriately reads .pth
   # files for namespaced packages. Unfortunately, there's not an
@@ -57,12 +60,13 @@ def vendor(folder):
 
 
 
-def virtualenv(path):
+def virtualenv(path, position=1):
   """
   Adds the given virtualenv's site-packages to the python path.
  
   Args:
-    path: Path to a root of the virtualenv, relative to os.getcwd()
+    path: Path to a root of the virtualenv, relative to ``os.getcwd()``
+    position: passed through to :func:`vendor`.
   """
   site_dir = os.path.join(path, 'lib', 'python' + sys.version[:3], 'site-packages')
-  vendor(site_dir)
+  vendor(site_dir, position=position)
