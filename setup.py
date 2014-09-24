@@ -18,6 +18,7 @@ setup(
         'Programming Language :: Python',
     ],
     packages=['darth'],
+    test_suite='nose.collector',
     install_requires=[
     ],
 )
