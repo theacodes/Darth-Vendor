@@ -3,7 +3,7 @@ from setuptools import setup
 VERSION = '0.0.1'
 
 setup(
-    name="Darth Vendor",
+    name="darth_vendor",
     version=VERSION,
     author='Jon Wayne Parrott, [proppy], [webmaven]',
     author_email='jjramone13@gmail.com, [proppy], [webmaven]',
