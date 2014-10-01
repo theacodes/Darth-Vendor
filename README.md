@@ -40,4 +40,4 @@ Installing packages
 
 Install packages using ``pip`` with the ``--target`` or ``-t`` option.
 
-    pip instal --target lib protopigeon
+    pip install --target lib protopigeon
