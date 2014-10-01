@@ -40,11 +40,14 @@ def vendor(folder, position=1):
 
   # Check if the path contains a virtualenv.
   site_dir = os.path.join(folder, 'lib', 'python' + sys.version[:3], 'site-packages')
-  if os.path.exists(site_dir):
+  if os.path.isdir(site_dir):
     folder = site_dir
   # Otherwise it's just a normal path, make it absolute.
   else:
     folder = os.path.join(os.path.dirname(__file__), folder)
+
+    if not os.path.isdir(folder):
+      raise ValueError("Provided path '%s' is not a directory." % folder)
 
   # Use site.addsitedir() because it appropriately reads .pth
   # files for namespaced packages. Unfortunately, there's not an

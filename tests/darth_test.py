@@ -26,6 +26,9 @@ class DarthTestCase(unittest.TestCase):
     import bar
     return bar.is_bar
 
+  def testNonExistent(self):
+    self.assertRaises(ValueError, darth.vendor, 'doesntexist')
+
   def testAddVirtualenv(self):
     self.assertRaises(ImportError, self.isFooBar)
     darth.vendor(os.path.join(os.path.dirname(__file__), 'testdata', 'venv'))
