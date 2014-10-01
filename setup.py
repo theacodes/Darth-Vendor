@@ -1,6 +1,6 @@
 from setuptools import setup
 
-VERSION = '0.0.1'
+VERSION = '0.0.2'
 
 setup(
     name="darth",
@@ -17,7 +17,7 @@ setup(
         'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python',
     ],
-    packages=['darth'],
+    py_modules=['darth'],
     test_suite='nose.collector',
     install_requires=[
     ],
