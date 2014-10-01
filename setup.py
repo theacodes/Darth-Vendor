@@ -1,6 +1,6 @@
 from setuptools import setup
 
-VERSION = '0.0.2'
+VERSION = '0.0.3'
 
 setup(
     name="darth",
@@ -18,6 +18,9 @@ setup(
         'Programming Language :: Python',
     ],
     py_modules=['darth'],
+    entry_points={
+        'console_scripts': ['darth-bootstrap=darth_bootstrap:bootstrap']
+    },
     test_suite='nose.collector',
     install_requires=[
     ],
