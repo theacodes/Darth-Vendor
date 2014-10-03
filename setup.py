@@ -1,6 +1,6 @@
 from setuptools import setup
 
-VERSION = '0.0.5'
+VERSION = '0.0.6'
 
 setup(
     name="darth",
@@ -17,7 +17,7 @@ setup(
         'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python',
     ],
-    py_modules=['darth'],
+    py_modules=['darth', 'darth_bootstrap'],
     entry_points={
         'console_scripts': ['darth-bootstrap=darth_bootstrap:bootstrap']
     },
