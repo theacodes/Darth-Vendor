@@ -25,7 +25,7 @@ import os.path
 import sys
 
 
-def vendor(folder, position=1):
+def vendor(folder, index=1):
   """
   Adds the given folder to the python path. Supports namespaced packages.
   By default, packages in the given folder take precedence over site-packages
@@ -71,3 +71,7 @@ def vendor(folder, position=1):
   # The final product is something like this:
   #   ['.', '/vendor-folder', /site-packages/x', 'site-packages/y']
   sys.path.extend(remainder)
+
+
+# Alias for appengine sdk compatibility.
+add = vendor
