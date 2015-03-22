@@ -29,8 +29,10 @@ Usage
 
 If you used the ``darth-bootstrap`` script it will automatically create the appropriate ``appengine-config.py`` for you. If you already have an ``appengine-config.py`` or if you installed with the alternative method, you'll need to add these lines to your ``appengine_config.py`` to enable third-party packages:
 
-    import darth
-    darth.vendor('lib')
+~~~python
+import darth
+darth.vendor('lib')
+~~~
 
 You can replace ``lib`` with the folder you have chosen to store third-party packages in.
 
