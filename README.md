@@ -4,6 +4,28 @@ Darth-Vendor
 Third-party vendoring helper for Google App Engine and other sandboxed python environments.
 
 
+Hey, you! LISTEN!
+-----------------
+
+Darth is now part of the official Google App Engine SDK. **You don't need this library!**
+
+To use with GAE, just create a ``appengine_config.py`` file like this:
+
+```python
+from google.appengine.ext import vendor
+
+vendor.add('lib')
+```
+
+And pip with ``-t lib`` to install packages:
+
+```
+$ pip install -t lib gcloud
+```
+
+You can read more about vendoring in the [official docs](https://cloud.google.com/appengine/docs/python/tools/libraries27#vendoring).
+
+
 Installation
 ------------
 
